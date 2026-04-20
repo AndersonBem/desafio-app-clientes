@@ -20,7 +20,7 @@ const clienteSchema = new mongoose.Schema(
              message: 'Telefone inválido'
          } 
     },
-    email: { type: String, required: true, trim: true, lowercase: true, validate: [validator.isEmail, 'Email inválido']}
+    email: { type: String, required: true, trim: true, lowercase: true,unique: true, validate: [validator.isEmail, 'Email inválido']}
   },
   {
     timestamps: true
